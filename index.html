@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trip.com - Travel & Hotel Bookings</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for small icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Top Header Bar -->
+  <header class="top-header">
+    <div class="container header-content">
+      <div class="logo">
+        <span class="trip-blue">Trip</span><span class="trip-dot">.</span><span class="trip-blue">com</span>
+      </div>
+
+      <div class="header-right">
+        <div class="support-info">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <span class="label">Call 24/7 Support</span>
+            <span class="phone-number">+91 93456 33931("sk")</span>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Search entire website here...">
+          <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-navbar">
+    <div class="container nav-content">
+      <ul class="nav-links">
+        <li class="active"><a href="#">Hotels</a></li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Vacations</a></li>
+        <li><a href="#">Hot Deals</a></li>
+        <li><a href="#">Travel Guides</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <button class="btn btn-yellow">SIGN UP</button>
+        <button class="btn btn-yellow">MY ACCOUNT</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="hero-bg">
+      <img src="inner.png.jpg" alt="Resort Room Ocean View">
+      
+      <!-- Overlay Banner Card -->
+      <div class="hero-card">
+        <h3>Grand Azure Resort, Maldives</h3>
+        <p>Experience ultra-luxury oceanfront living with private infinity pool access and world-class fine dining.</p>
+        <div class="price-tag">$1,200 <span>Inclusive of food, dinner</span></div>
+      </div>
+    </div>
+
+    <div class="booking-widget">
+      <div class="widget-tab">Book Your Trip</div>
+      <form id="bookingForm" class="booking-fields">
+        <div class="field-group">
+          <label>What?</label>
+          <select id="tripType">
+            <option value="hotel">Hotel</option>
+            <option value="flight">Flight</option>
+            <option value="resort">Resort</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label>Where?</label>
+          <input type="text" id="destination" placeholder="City or Destination" required>
+        </div>
+
+        <div class="field-group">
+          <label>When?</label>
+          <input type="date" id="checkInDate" required>
+        </div>
+
+        <div class="field-group">
+          <label>Who?</label>
+          <div class="who-subfields">
+            <select id="rooms">
+              <option value="1">1 Room</option>
+              <option value="2">2 Rooms</option>
+            </select>
+            <select id="adults">
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+            </select>
+            <select id="children">
+              <option value="0">0 Child</option>
+              <option value="1">1 Child</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-search">SEARCH</button>
+      </form>
+
+      <table id="bookingTable" style="width:100%; margin-top:20px; border-collapse:collapse; background:#ffffff;">
+        <thead>
+          <tr style="background:#f3f3f3;">
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">Trip Type</th>
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">Destination</th>
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">When</th>
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">Rooms</th>
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">Adults</th>
+            <th style="padding:10px; border:1px solid #ddd; text-align:left;">Children</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div style="margin-top:15px; text-align:right;">
+        <button type="button" id="clearBookingsBtn" style="padding:10px 18px; background:#d9534f; color:#fff; border:none; border-radius:6px; cursor:pointer;">Clear All</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="container page-content">
+    <section class="section-block">
+      <div class="section-header">
+        <h2>Popular Hotels</h2>
+        <div class="slider-controls">
+          <button class="arrow-btn" onclick="prevSlide()"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="arrow-btn" onclick="nextSlide()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <div class="hotel-grid">
+
+        <div class="hotel-card">
+          <div class="card-img-wrap">
+            <img src="taj.png" alt="Taj Gateway">
+          </div>
+          <div class="card-details">
+            <div>
+              <h4>The Heritage Palace</h4>
+              <span>Mumbai, India</span>
+            </div>
+            <div class="badge-price">$2000</div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="card-img-wrap">
+            <img src="mont.jpg" alt="Mont Blanc Ocean">
+          </div>
+          <div class="card-details">
+            <div>
+              <h4>Mont Blanc Ocean Bay</h4>
+              <span>Zurich, Switzerland</span>
+            </div>
+            <div class="badge-price">$1200</div>
+          </div>
+        </div>
+
+        <div class="hotel-card">
+          <div class="card-img-wrap">
+            <img src="food.jpg" alt="Resort Marriott">
+          </div>
+          <div class="card-details">
+            <div>
+              <h4>Hotel Marriott Coast</h4>
+              <span>Melbourne, Australia</span>
+            </div>
+            <div class="badge-price">$1100</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-header">
+        <h2>Hot Deals</h2>
+      </div>
+
+      <div class="deals-grid">
+        <!-- Deal 1 -->
+        <div class="deal-card">
+          <img src="desert.jpg" alt="Paris Deal">
+          <div class="deal-badge red-badge"><i class="fa-solid fa-tag"></i> %25</div>
+          <div class="deal-overlay">
+            <span class="sub">From $350</span>
+            <h3>PARIS EUROSTAR BREAKS</h3>
+            <p>Romantic city view deals including high-speed transfers and tour guide entry.</p>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <img src="island.jpg" alt="Island Deal">
+          <div class="deal-badge gift-badge"><i class="fa-solid fa-gift"></i></div>
+          <div class="deal-overlay">
+            <span class="sub">Tropical Escape</span>
+            <h3>MALDIVES SUMMER SPECIAL</h3>
+            <p>Private water villas with all meals included and complimentary coral diving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="blogs-bar">
+      <span class="blog-tag">Latest Blogs</span>
+      <span class="blog-text">Best places to visit in India during winter vacations 2026</span>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About the company</a></li>
+          <li><a href="#">Terms and Conditions</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4>Don't miss our deals and offers</h4>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed successfully!');">
+          <input type="email" placeholder="Enter your email id" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

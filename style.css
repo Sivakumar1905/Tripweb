@@ -1,0 +1,554 @@
+/* Reset and Default Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #ededed;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.top-header {
+  background: #ffffff;
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.trip-blue {
+  color: #1765ff;
+}
+
+.trip-dot {
+  color: #ffaa00;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.support-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+}
+
+.support-info i {
+  font-size: 20px;
+  color: #333;
+}
+
+.support-info .label {
+  display: block;
+  font-size: 11px;
+  color: #777;
+}
+
+.support-info .phone-number {
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.search-box input {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.search-box button {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #777;
+}
+
+/* Navigation Bar */
+/* Navigation Bar */
+.main-navbar {
+  background-color: #1a56a6;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 14px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.nav-links li.active a,
+.nav-links li a:hover {
+  background-color: #144485;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: none;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 7px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+}
+
+.btn-yellow {
+  background-color: #f7b928;
+  color: #2b2b2b;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 480px;
+}
+
+.hero-bg {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Menu Dropdown on Top Left of Hero */
+.category-menu {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.category-menu ul {
+  list-style: none;
+}
+
+.category-menu ul li a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-menu ul li.active a,
+.category-menu ul li a:hover {
+  background-color: #f5f5f5;
+  color: #1a56a6;
+  font-weight: bold;
+}
+
+/* Overlay Box on Hero Image */
+.hero-card {
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  width: 320px;
+  background: rgba(26, 86, 166, 0.85);
+  color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.hero-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.hero-card p {
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: #e0e9f5;
+}
+
+.hero-card .price-tag {
+  background: #144485;
+  padding: 6px 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-card .price-tag span {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.booking-widget {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.widget-tab {
+  display: inline-block;
+  background: #1e242b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.booking-fields {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  gap: 12px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.field-group label {
+  font-size: 11px;
+  color: #777;
+  margin-bottom: 3px;
+}
+
+.field-group input,
+.field-group select {
+  padding: 7px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+  outline: none;
+}
+
+.who-subfields {
+  display: flex;
+  gap: 4px;
+}
+
+.btn-search {
+  background-color: #e63946;
+  color: #ffffff;
+  border: none;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 24px;
+  margin-top: 14px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-search:hover {
+  background-color: #cc2936;
+}
+
+.page-content {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.section-block {
+  margin-bottom: 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  color: #333;
+}
+
+.arrow-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.hotel-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.card-img-wrap {
+  height: 150px;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.card-details h4 {
+  font-size: 13px;
+  color: #222;
+}
+
+.card-details span {
+  font-size: 11px;
+  color: #777;
+}
+
+.badge-price {
+  background: #1a56a6;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.deal-card {
+  position: relative;
+  height: 180px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.deal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.deal-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.red-badge {
+  background: #e63946;
+}
+
+.gift-badge {
+  background: #e63946;
+}
+
+.deal-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+  padding: 14px;
+  color: #fff;
+}
+
+.deal-overlay .sub {
+  font-size: 11px;
+  color: #ffcc00;
+}
+
+.deal-overlay h3 {
+  font-size: 14px;
+  margin: 2px 0 4px;
+}
+
+.deal-overlay p {
+  font-size: 11px;
+  color: #ddd;
+}
+
+.blogs-bar {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.blog-tag {
+  background: #eee;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #444;
+}
+
+.blog-text {
+  font-size: 12px;
+  color: #555;
+}
+
+.main-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  gap: 20px;
+}
+
+.footer-col h4 {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  font-size: 11px;
+  color: #666;
+}
+
+.footer-col ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  background: #555;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 6px;
+}
+
+.newsletter-form input {
+  padding: 6px 10px;
+  font-size: 11px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  flex: 1;
+}
+
+.newsletter-form button {
+  background-color: #1a56a6;
+  color: #fff;
+  border: none;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
